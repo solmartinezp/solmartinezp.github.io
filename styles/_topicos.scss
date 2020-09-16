@@ -1,0 +1,48 @@
+.topicos {
+    @include margin (16px, 16px);
+    .title2 {
+        @include title();
+        font-weight: 500;
+        font-size: 36px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 42px;
+        width: 288px;
+        height: 84px;
+    }
+    .icon_total {
+        position: relative;
+        margin-top: 37px;
+        display: flex;
+        flex-direction: column;
+        .i1{
+           @include icon(49px);
+        }
+        .i2{
+            @include icon (65px);
+            }
+        .i3 {
+            @include icon (65px);
+        }
+        .i4 {
+            @include icon (42px);
+        }
+        img {
+             width: 104px;
+             height: 104px;
+             margin-bottom: 13px;
+             align-self: center;
+                }
+        h5 {
+                width: 288px;
+                height: fit-content;
+                @include title();
+                font-weight: bolder;
+                font-size: 24px;
+                color: #060A24;
+                letter-spacing: 0;
+                text-align: center;
+            }
+        
+        }
+    }

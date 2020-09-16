@@ -1,0 +1,44 @@
+.nosotros {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100%; 
+        margin-top: -90px; 
+    }
+
+    .nosotros_div {
+        position: relative;
+        margin-top: 27px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        @include margin(16px, 16px);
+        .title2 {
+            @include title();
+            font-size: 36px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 42px;
+            width: 288px;
+            height: 84px;
+            margin-bottom: 8px;
+        }
+        .parr {
+            font-family: $font_p;
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            font-weight: 500;
+            margin-bottom: 54px;
+        }
+        .p1 {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+

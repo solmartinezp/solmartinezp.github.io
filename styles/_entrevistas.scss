@@ -1,0 +1,42 @@
+.entrevistas {
+    margin-bottom: 46px;
+    .title2 {
+        @include margin(16px, 16px);
+        @include title();
+        width: 288px;
+        height: 84px;
+        font-size: 36px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 42px;
+    }
+    .fotos {
+        display: flex;
+        flex-direction: column;
+        margin-top: 14px;
+        position: relative;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+       
+        .f1 {
+            @include fotos();        
+        }
+        .f2 {
+            @include fotos(); 
+           
+        }
+        .f3 {
+            @include fotos(); 
+        }
+        .f4 {
+            @include fotos(); 
+        }
+        .f5 {
+            @include fotos(); 
+        }
+        .f6 {
+            @include fotos(); 
+        }
+    }
+}

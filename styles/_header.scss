@@ -1,0 +1,93 @@
+.header {
+    width: 100vw;
+    height: 44px;
+    background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    .logo {
+        width: 24px;
+        height: 24px;
+        float: left;
+        display: block;
+        margin-top: 10px;
+        @include margin(16px, 0px);
+    }
+    ul {
+        list-style: none;
+        overflow: hidden;
+        background-color: #FFFFFF;
+        a {
+            @include margin(16px, 0);
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 28px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+    }
+    .menu {
+        clear:both;
+        max-height: 0;
+        width: 100%;
+        background: #0000EC;
+        transition: max-height .2s ease-out;
+        float: right;
+    }
+    .menu-icon {
+        position: relative;
+        float: right;
+        cursor: pointer;
+        margin: 21px 19px;
+        .nav-icon {
+            background: #060A24;
+            display: block;
+            height: 2px;
+            width: 18px;
+            position: relative;
+            transition: background .2s ease-out;
+        }
+        .nav-icon::before {
+            background:#060A24;
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            top: 5px;
+        }
+        .nav-icon::after{
+            background:#060A24;
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            top: -5px;
+        }
+        }
+    .menu-btn{
+        display: none; 
+    }
+    .menu-btn:checked ~ .menu { 
+        max-height: 224px;
+        padding-top: 16px;   
+    }
+    .menu-btn:checked ~ .menu-icon .nav-icon {
+        background: transparent;
+    } 
+    .menu-btn:checked ~ .menu-icon .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    } 
+    .menu-btn:checked ~ .menu-icon .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0;
+    } 
+}
+

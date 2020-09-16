@@ -1,0 +1,42 @@
+.episodios_section {
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    transform: skewY(-5deg);
+    margin-top: 4.5%;
+    padding-bottom: 50px;
+}
+
+.episodios { 
+        transform: skewY(5deg);
+        padding: 64px 0;
+         .title2 {
+            @include title();
+            @include margin(16px, 16px);
+            color: white;
+            font-size: 36px;
+            letter-spacing: 0;
+            line-height: 42px;
+            padding-bottom: 21px;
+            width: 157px;
+            height: 42px;
+    }
+}
+
+.spotify {
+    @include margin(11px, 11px);
+    display: flex;
+    height: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    .cont_iframe{
+        position: relative;
+        width: 100%;
+        height: 24%;
+        iframe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}

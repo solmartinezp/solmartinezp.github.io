@@ -1,0 +1,49 @@
+.hello {
+    clear:both;
+    margin-top: 73px;
+    display: flex;
+    flex-direction: column;
+    @include margin(16px, 16px);
+    .div_title {
+        width: 232px;
+        height: 84px;
+        margin-bottom: 16px;
+        .t1 {
+            @include title();
+            display:inline;
+            color: #060A24;
+            font-size: 36px;
+            width: 85px;
+            height: 42px;
+        }
+        .t2 {
+            text-decoration: line-through;
+        }
+        .t3 {
+            width: 212px;
+            height: 42px;
+        }
+        .t4 {
+            width: 10px;
+            height: 42px;
+            display: inline-block;
+        }  
+       
+}
+
+    #parr-mobile {
+        display: inline-block;
+        font-family: $font_p;
+        font-size: 14px;
+        width: 288px;
+        height: 66px;
+        letter-spacing: 0;
+        line-height: 22px;
+        color: #060A24;
+    }
+    #parr-desktop {
+        display: none;
+    }
+
+    @import '_button-mobile';
+}

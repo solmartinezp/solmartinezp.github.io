@@ -1,0 +1,61 @@
+.footer {
+    .novedades {
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        transform: skewY(-4deg);
+        .novedades_content {
+            transform: skewY(4deg);
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title2 {
+            @include margin(16px, 16px);
+            @include title();
+            font-size: 36px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 42px;
+            width: 288px;
+            height: 126px;
+        }
+        .button {
+            @include button();
+            margin-bottom: 67px; 
+        }
+        .button:hover {
+            color:#FFFFFF;
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        }
+    }
+    .bottom {
+        background-color: white;
+        position: relative;
+        z-index: 1;
+        margin-top: -38px;
+
+        .bottom_p {
+            background-color: white;
+            font-family: $font_p;
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            padding-top: 24px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .social_media {
+            margin-top: 16px;
+            font-size: 16px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 28px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-bottom: 31px;
+        }
+    }
+}

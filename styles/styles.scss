@@ -1,0 +1,376 @@
+//Mobile first
+
+$font_p: "IBM Plex Mono", monospace;
+$font_t: 'IBM Plex Sans', sans-serif;
+
+@mixin margin ($m_left, $m_right) {
+    margin-left: $m_left;
+    margin-right: $m_right;
+    
+}
+
+@mixin title() {
+    font-family: $font_t;
+    font-weight: 400;
+}
+
+@mixin fotos () {
+    width: 100%;
+    display: inherit;
+    img {
+        width: 100%;
+    }
+}
+
+@mixin icon($m_b) {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: $m_b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: $font_p;
+    margin: 0;
+}
+
+@import '_header';
+@import '_hello';
+@import '_button-mobile';
+@import '_episodios';
+@import '_nosotros';
+@import '_entrevistas';
+@import '_topicos';
+@import '_footer';
+
+@media only screen and (min-width: 550px) and (max-width: 767px) {
+    .header {
+        width: 100vw;
+    }
+    .nosotros {
+        img {
+            width: 60%;
+        }
+        .parr {
+            margin-right: 20%;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+    .header {
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo {
+            align-self: center;
+            justify-self: flex-start;
+            margin: 22px 5%;
+            width: 36px;
+            height: 36px;
+        }
+        nav {
+            width: 70%;
+            justify-self: flex-end;
+            display: flex;
+            align-items: center;
+        }
+        .menu {
+            max-height: 80px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin: 26px 0;
+            a {
+                color: #060A24;
+                letter-spacing: 0;
+                font-family: $font_p;
+                margin: 0;
+                font-weight: 500;
+            }
+            a:hover {
+                color: #00F3BB;
+                text-decoration: line-through;
+            }
+            a:active{
+                color: rgba(6,10,36,0.56);
+            }
+            li {
+                margin-right: 48px;
+            }
+            li:last-of-type{
+                margin-right: 5%;
+            }
+        }
+        .menu-icon {
+            display: none;
+        }
+    }
+
+    .hello {
+        margin-left: 12%;
+        margin-top: 120px;   
+        .div_title {
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 0;
+            font-size: 64px;
+            font-weight: bold;
+            .t1 {
+                display:inline-block;
+                color: #060A24;
+                font-size: 64px;
+                width: unset;
+                height: unset;
+            }
+            .t2 {
+                display:inline-block;
+                color: #060A24;
+                font-size: 64px;
+                width: unset;
+                height: unset;
+            }
+            .t3 {
+                display:inline-block;
+                color: #060A24;
+                font-size: 64px;
+                width: unset;
+                height: unset;
+            }
+            .t4 {
+                display:inline-block;
+                color: #0000EC;
+                font-size: 64px;
+                width: unset;
+                height: unset;
+            }
+        }
+        #parr-mobile {
+            display: none;
+        }
+        #parr-desktop {
+            display: inline-block;
+            width: 628px;
+        }
+        .button {
+            align-self: flex-start;
+            margin-top: 56px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .episodios_section {
+        height: 900px;
+        .episodios {
+            position: relative;
+            padding: 8% 0;
+            height: inherit;
+            width: unset;
+            @include margin(0, 0);
+            .title2 {
+                font-size: 48px;
+                width: unset;
+                height: unset;
+                @include margin(12%, 0);
+                padding-bottom: 26px;
+            }
+            .spotify {
+                @include margin(5%, 5%);
+                display: grid;
+                height: 600px;
+                grid-template-columns: 2fr  2fr;
+                grid-template-rows: auto auto;
+                grid-template-areas: "iframe1  iframe2"
+                                    "iframe3  iframe4";
+                align-items: baseline;
+                column-gap: 5%;
+                .cont_iframe:first-of-type {
+                    grid-area: iframe1;
+                    height: 100%;
+                }
+                .cont_iframe:nth-of-type(2) {
+                    grid-area: iframe2;
+                    height: 100%;
+
+                }
+                .cont_iframe:nth-of-type(3) {
+                    grid-area: iframe3;
+                    height: 100%;
+                }
+                .cont_iframe:nth-of-type(4) {
+                    grid-area: iframe4;
+                    height: 100%;
+
+                }
+            }
+        }
+        }
+
+    .nosotros {
+        flex-direction: row;
+        align-items: unset;
+        margin-top: 4%;
+        justify-content: center;
+        @include margin(0, 0);
+        img {
+            margin-top: -200px;
+            width: 40%;
+            margin-right: 4%;
+        }
+        .nosotros_div {
+            @include margin(0, 0);
+            margin-top: 5%;
+            height: fit-content;
+            width: 30%;
+            flex-direction: column;
+            .title2 {
+                margin-bottom: 24px;
+                font-size: 48px;
+                width: auto;
+                height: fit-content;
+                span {
+                    display: inline;
+                }
+
+            }
+            .parr {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: unset;
+                display: flex;
+                flex-direction:column;  
+            }
+            .p1 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .entrevistas {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        .title2{
+            @include margin(12%, 0);
+            width: unset;
+            height: unset;
+            font-size: 48px;
+        }
+        .fotos {
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-top: 36px;
+        }
+    }
+    
+    .topicos {
+        @include margin (0, 0);
+        margin-bottom: 34px;
+        .title2{
+            margin-left: 12%;
+            font-size: 48px;
+            width: unset;
+            height: unset;
+        }
+        .icon_total {
+            margin-top: 56px;
+            flex-direction: row;
+            justify-content: center;
+            .i1{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: unset;
+            }
+            .i2{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: unset;
+            } 
+            .i3{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: unset;
+            }  
+            .i4{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: unset;
+            }
+            h5 {
+                width: 220px;
+            }
+        }
+    }
+
+    .footer {
+        overflow: hidden;
+        .novedades {
+            transform: skewY(-5deg);
+            margin-top: 5%;
+            height: 455px;
+            .novedades_content{
+                transform: skewY(5deg);
+                padding-top: 8%;
+            }
+            .title2{
+                font-size: 48px;
+                width: unset;
+                height: unset;
+            }
+            .button {
+                width: 345px;
+                height: 56px;
+                font-size: 18px;
+                margin-bottom: 151px;
+            }
+        }
+
+        .bottom {
+            margin-top: -62px;
+            height: 95px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            
+            .bottom_p {
+                @include margin(6%, 0);
+                font-size: 16px;
+                padding-top: 0;
+                width: unset;
+                height: unset;
+            }
+            .social_media {
+                width: 20%;
+                margin-top: 0;
+                margin-bottom: 0;
+                @include margin(0, 6%);
+                font-size: 18px;
+                justify-content: space-evenly;
+            }
+        }
+    }
+ 
+
+}
+
